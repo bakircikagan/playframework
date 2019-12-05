@@ -14,6 +14,7 @@ import play.api._
 import play.api.inject.DefaultApplicationLifecycle
 import play.core._
 import play.utils.Threads
+import play.utils.Colors
 
 import scala.collection.JavaConverters._
 import scala.concurrent.duration._
@@ -110,7 +111,7 @@ object DevServerStart {
             )
         }
 
-        println(play.utils.Colors.magenta("--- (Running the application, auto-reloading is enabled) ---"))
+        println(Colors.make(Colors.MAGENTA, "--- (Running the application, auto-reloading is enabled) ---"))
         println()
 
         // Create reloadable ApplicationProvider
@@ -152,7 +153,7 @@ object DevServerStart {
             try {
               if (lastState.isSuccess) {
                 println()
-                println(play.utils.Colors.magenta("--- (RELOAD) ---"))
+                println(Colors.make(Colors.MAGENTA, "--- (RELOAD) ---"))
                 println()
               }
 
